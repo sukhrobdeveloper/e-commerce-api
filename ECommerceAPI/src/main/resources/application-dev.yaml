@@ -1,0 +1,24 @@
+server:
+  port: ${server_port}
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+  application:
+    name: e-commerce-api
+  datasource:
+    username: ${database_username}
+    password: ${database_password}
+    url: ${database_name}
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+springdoc:
+  api-docs:
+    path: /api/v1/docs
+  swagger-ui:
+    tags-sorter: alphabetically
+    path: /api/v1/swagger-ui.html
